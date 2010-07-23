@@ -1,0 +1,41 @@
+--- 
+identifier: activity-concepts
+title: Activity Streams Concepts and Representations
+specification_url: http://activitystrea.ms/head/json-activity.html
+status: draft
+sort_index: 20
+
+verbs: 
+
+  - name: Post
+    identifier: post
+    description: The act of authoring an object and then publishing it online.
+    specification_anchor: post-verb
+    
+activity_components: 
+  "": 
+
+    - name: Actor
+      description: An object construct that describes who or what performed the action that this activity describes.
+      specification_anchor: activity.actor
+      json: 
+        propertyName: actor
+        specification_anchor: json.activity.full
+
+object_components: 
+  "": 
+
+    - name: ID
+      description: An absolute URI that uniquely identifies the object.
+      json: 
+        propertyName: id
+        specification_anchor: json.object.full
+      specification_anchor: object.id
+
+    - name: Name
+      description: A human readable display name for the object, if the object has a name.
+      json: 
+        propertyName: displayName
+        specification_anchor: json.object.full
+      specification_anchor: object.name
+
