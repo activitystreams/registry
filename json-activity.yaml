@@ -107,3 +107,89 @@ object_components:
       specification_anchor: json.object.full
     specification_anchor: object.name
 
+  - name: Summary
+    description: A human-readable description or summary of the object.
+    json:
+      property_name: summary
+      specification_anchor: json.object.full
+    specification_anchor: object.summary
+
+  - name: Representative Image
+    description: A media link construct that identifies an image resource which provides a visual representation of the object.
+    json:
+      property_name: image
+      specification_anchor: json.object.full
+    specification_anchor: object.image
+
+  - name: Permalink URL
+    description: The URI of a resource which provides an HTML representation of the object.
+    json:
+      property_name: link
+      specification_anchor: json.object.full
+    specification_anchor: object.permalink
+
+  - name: Object Type
+    description: An object type keyword that identifies the type of the object.
+    json:
+      property_name: objectType
+      specification_anchor: json.object.full
+    specification_anchor: object.object-type
+
+  - name: In Reply To Object
+    description: An object construct that this object is a response to.
+    json:
+      property_name: inReplyTo
+      specification_anchor: json.object.full
+    specification_anchor: object.in-reply-to-object
+
+  - name: Attached Object
+    description: An object construct that is attached to this object.
+    json:
+      property_name: attachedObjects
+      specification_anchor: json.object.full
+    specification_anchor: object.attached-object
+
+  - name: Reply Object
+    description: An object construct that has this object as its in reply to object.
+    json:
+      property_name: replies
+      specification_anchor: json.object.full
+    specification_anchor: object.reply
+
+  - name: Reaction Activity
+    description: An activity construct that describes an activity whose object is this object.
+    json:
+      property_name: reactions
+      specification_anchor: json.object.full
+    specification_anchor: object.reaction
+
+  - name: Action Link
+    description: An action link construct representing an action that a human could perform on this object.
+    json:
+      property_name: actionLinks
+      specification_anchor: json.object.full
+    specification_anchor: object.action-link
+
+  - name: Upstream Duplicate ID
+    description: A string containing the ID value of another object construct for which this object is a duplicate created by re-publishing.
+    json:
+      property_name: upstreamDuplicates
+      specification_anchor: json.object.full
+    specification_anchor: object.upstream-duplicate-id
+
+  - name: Downstream Duplicate ID
+    description: A string containing the ID value of another object construct which is a duplicate of this object created by re-publishing.
+    json:
+      property_name: downstreamDuplicates
+      specification_anchor: json.object.full
+    specification_anchor: object.downstream-duplicate-id
+
+  - name: Standard Link
+    description: A standard hypertext link whose source is the object.
+    specification_anchor: object.standard-link
+    json:
+      property_name: links
+      specification_anchor: json.object.full
+
+
+
