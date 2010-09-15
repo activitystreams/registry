@@ -3,6 +3,7 @@ identifier: activity-schema
 title: Activity Schema
 specification_url: http://activitystrea.ms/head/activity-schema.html
 status: draft
+date: 2010-07-08
 
 verbs:
 
