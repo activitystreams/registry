@@ -9,8 +9,68 @@ verbs:
 
   - name: Mark as Favorite
     identifier: favorite
-    description: The act of marking the object as an item of special interest.
+    description: Marking the object as an item of special interest
     specification_anchor: favorite
+
+  - name: Start Following
+    identifier: follow
+    description: Starting to follow the object
+    specification_anchor: follow
+
+  - name: Mark as Liked
+    identifier: like
+    description: Indicating that one likes the object
+    specification_anchor: like
+
+  - name: Make Friend
+    identifier: make-friend
+    description: Creating a friendship relationship that is reciprocated by the object
+    specification_anchor: make-friend
+
+  - name: Join
+    identifier: join
+    description: Becoming a member of the object
+    specification_anchor: join
+
+  - name: Play
+    identifier: play
+    description: Spending some time enjoying the object
+    specification_anchor: play
+
+  - name: Save
+    identifier: save
+    description: Calling out the object as being of interest primarily to the actor
+    specification_anchor: save
+
+  - name: Share
+    identifier: share
+    description: Calling out the object to attract others to it
+    specification_anchor: share
+
+  - name: Tag
+    identifier: tag
+    description: Identifying the presence of the object inside the target.
+    specification_anchor: tag
+
+  - name: Update
+    identifier: update
+    description: Modifying the object.
+    specification_anchor: update
+
+  - name: Positive RSVP
+    identifier: rsvp-yes
+    description: Indicating a positive RSVP for the object.
+    specification_anchor: rsvp-yes
+
+  - name: Possible RSVP
+    identifier: rsvp-maybe
+    description: Indicating a possible RSVP for the object.
+    specification_anchor: rsvp-maybe
+
+  - name: Negative RSVP
+    identifier: rsvp-no
+    description: Indicating a negative RSVP for the object.
+    specification_anchor: rsvp-no
 
 object_types:
 
