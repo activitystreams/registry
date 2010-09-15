@@ -18,7 +18,7 @@ activity_components:
     description: An object construct that describes who or what performed the action that this activity describes.
     specification_anchor: activity.actor
     json:
-      propertyName: actor
+      property_name: actor
       specification_anchor: json.activity.full
 
 object_components:
@@ -26,14 +26,14 @@ object_components:
   - name: ID
     description: An absolute URI that uniquely identifies the object.
     json:
-      propertyName: id
+      property_name: id
       specification_anchor: json.object.full
     specification_anchor: object.id
 
   - name: Name
     description: A human readable display name for the object, if the object has a name.
     json:
-      propertyName: displayName
+      property_name: displayName
       specification_anchor: json.object.full
     specification_anchor: object.name
 
