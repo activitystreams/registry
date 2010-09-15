@@ -14,11 +14,81 @@ verbs:
 
 activity_components:
 
+  - name: Icon
+    description: A URI of a small image that provides a visual representation of the activity.
+    specification_anchor: activity.icon
+    json:
+      property_name: iconUrl
+      specification_anchor: json.activity.full
+
+  - name: Time
+    description: The time at which the activity occured.
+    specification_anchor: activity.time
+    json:
+      property_name: postedTime
+      specification_anchor: json.activity.full
+
   - name: Actor
     description: An object construct that describes who or what performed the action that this activity describes.
     specification_anchor: activity.actor
     json:
       property_name: actor
+      specification_anchor: json.activity.full
+
+  - name: Verb
+    description: A verb keyword that identifies the type of action performed.
+    specification_anchor: activity.verb
+    json:
+      property_name: verb
+      specification_anchor: json.activity.full
+
+  - name: Object
+    description: An object construct that describes the primary object of the activity.
+    specification_anchor: activity.object
+    json:
+      property_name: object
+      specification_anchor: json.activity.full
+
+  - name: Target
+    description: An object construct that describes the object to which the activity was performed.
+    specification_anchor: activity.target
+    json:
+      property_name: target
+      specification_anchor: json.activity.full
+
+  - name: Generator
+    description: An object construct that represents the application that was used to perform the activity.
+    specification_anchor: activity.generator
+    json:
+      property_name: generator
+      specification_anchor: json.activity.full
+
+  - name: Service Provider
+    description: An object construct that represents the service that is publishing the activity.
+    specification_anchor: activity.provider
+    json:
+      property_name: provider
+      specification_anchor: json.activity.full
+
+  - name: Title
+    description: An HTML representation of the natural language title for the activity.
+    specification_anchor: activity.title
+    json:
+      property_name: title
+      specification_anchor: json.activity.full
+
+  - name: Body
+    description: An HTML representation of a natural language description of the activity.
+    specification_anchor: activity.body
+    json:
+      property_name: body
+      specification_anchor: json.activity.full
+
+  - name: Standard Link
+    description: A standard hypertext link whose source is the activity.
+    specification_anchor: activity.standard-link
+    json:
+      property_name: links
       specification_anchor: json.activity.full
 
 object_components:
