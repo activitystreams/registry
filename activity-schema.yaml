@@ -49,33 +49,134 @@ verbs:
 
   - name: Tag
     identifier: tag
-    description: Identifying the presence of the object inside the target.
+    description: Identifying the presence of the object inside the target
     specification_anchor: tag
 
   - name: Update
     identifier: update
-    description: Modifying the object.
+    description: Modifying the object
     specification_anchor: update
 
   - name: Positive RSVP
     identifier: rsvp-yes
-    description: Indicating a positive RSVP for the object.
+    description: Indicating a positive RSVP for the object
     specification_anchor: rsvp-yes
 
   - name: Possible RSVP
     identifier: rsvp-maybe
-    description: Indicating a possible RSVP for the object.
+    description: Indicating a possible RSVP for the object
     specification_anchor: rsvp-maybe
 
   - name: Negative RSVP
     identifier: rsvp-no
-    description: Indicating a negative RSVP for the object.
+    description: Indicating a negative RSVP for the object
     specification_anchor: rsvp-no
 
 object_types:
 
   - name: Article
     identifier: article
-    description: An article, such as a news article, knowledge base entry or similar construct.
+    description: An article, such as a news article, knowledge base entry or similar construct
     specification_anchor: article
+
+  - name: Audio
+    identifier: audio
+    description: An item of audio content
+    specification_anchor: audio
+
+  - name: Bookmark
+    identifier: bookmark
+    description: A pointer to a URL
+    specification_anchor: bookmark
+
+  - name: Comment
+    identifier: comment
+    description: A textual response to another object
+    specification_anchor: comment
+
+  - name: File
+    identifier: file
+    description: A document or other file with no additional machine-readable semantics
+    specification_anchor: file
+
+  - name: Folder
+    identifier: folder
+    description: A collection of files or media objects
+    specification_anchor: folder
+
+  - name: Group
+    identifier: group
+    description: A social networking group
+    specification_anchor: group
+
+  - name: List
+    identifier: list
+    description: A collection of related objects
+    specification_anchor: list
+
+  - name: Note
+    identifier: note
+    description: A short-form text message
+    specification_anchor: note
+
+  - name: Person
+    identifier: person
+    description: A user account
+    specification_anchor: person
+
+  - name: Photo
+    identifier: photo
+    description: A graphical still image
+    specification_anchor: photo
+
+  - name: Photo Album
+    identifier: photo-album
+    description: A collection of images
+    specification_anchor: photo-album
+
+  - name: Place
+    identifier: place
+    description: A location on earth
+    specification_anchor: place
+
+  - name: Playlist
+    identifier: playlist
+    description: An ordered list of time-based media items
+    specification_anchor: playlist
+
+  - name: Product
+    identifier: product
+    description: A commercial good or service
+    specification_anchor: product
+
+  - name: Review
+    identifier: review
+    description: A primarily prosed-based commentary on another object
+    specification_anchor: review
+
+  - name: Service
+    identifier: service
+    description: Something that provides a service to others
+    specification_anchor: service
+
+  - name: Status
+    identifier: status
+    description: A human-readable update of the author's situation, mood, location or other status
+    specification_anchor: status
+
+  - name: Video
+    identifier: video
+    description: An item of video content
+    specification_anchor: video
+
+  - name: Event
+    identifier: event
+    description: An event that occurs in a certain place during a particular interval of time
+    specification_anchor: event
+
+  - name: Song
+    identifier: song
+    description: A song or a recording of a song
+    specification_anchor: song
+
 
