@@ -1,0 +1,20 @@
+---
+identifier: activity-schema
+title: Activity Schema
+specification_url: http://activitystrea.ms/head/activity-schema.html
+status: draft
+
+verbs:
+
+  - name: Mark as Favorite
+    identifier: favorite
+    description: The act of marking the object as an item of special interest.
+    specification_anchor: favorite
+
+object_types:
+
+  - name: Article
+    identifier: article
+    description: An article, such as a news article, knowledge base entry or similar construct.
+    specification_anchor: article
+
