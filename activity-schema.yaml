@@ -179,4 +179,14 @@ object_types:
     description: A song or a recording of a song
     specification_anchor: song
 
+activity_components:
+
+  - name: Location
+    description: An object construct representing the location at which the activity occured.
+    specification_anchor: anchor6
+
+  - name: Mood
+    description: A human-readable keyword or short phrase describing the mood of the actor at the time the activity was performed.
+    specification_anchor: mood
+
 
