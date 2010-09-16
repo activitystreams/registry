@@ -161,7 +161,7 @@ object_types:
 
   - name: Status
     identifier: status
-    description: A human-readable update of the author's situation, mood, location or other status
+    description: "A human-readable update of the author's situation, mood, location or other status"
     specification_anchor: status
 
   - name: Video
@@ -189,4 +189,71 @@ activity_components:
     description: A human-readable keyword or short phrase describing the mood of the actor at the time the activity was performed.
     specification_anchor: mood
 
+
+object_components:
+
+  - name: Full Content
+    description: A HTML fragment that represents the object excluding its title and author
+    json:
+      property_name: content
+
+  - name: Full Media Stream
+    description: A media link construct linking to the full-fidelity media asset for a time-based media object
+    json:
+      property_name: stream
+
+  - name: Embed Code
+    description: A HTML fragment that provides a viewer or interactive player for the media asset of a media object
+    json:
+      property_name: embedCode
+
+  - name: Target URL
+    description: For an object that acts as a pointer to a URL, the URL that is the target of the pointer
+    json:
+      property_name: targetUrl
+
+  - name: File URL
+    description: For an object that represents some kind of file, the URL at which the file can be retrieved
+    json:
+      property_name: fileUrl
+
+  - name: MIME Type
+    description: For an object that has a File URL, an advisory MIME type for the resource at that URL
+    json:
+      property_name: mimeType
+
+  - name: Larger Image
+    description: A media link construct for an alternative version of the representative image that is larger and intended for standalone viewing
+    json:
+      property_name: fullImage
+
+  - name: Latitude
+    description: For objects that have a physical presence on earth, the (possibly-approximate) latitude of its current location
+    json:
+      property_name: latitude
+
+  - name: Longitude
+    description: For objects that have a physical presence on earth, the (possibly-approximate) longitude of its current location
+    json:
+      property_name: longitude
+
+  - name: Rating
+    description: For objects that represent some kind of opinion, a number representing the overall rating
+    json:
+      property_name: rating
+
+  - name: Icon
+    description: A media link construct for a small icon representing the object
+    json:
+      property_name: icon
+
+  - name: Start Date and Time
+    description: For objects that exist only after a certain time, the time that the object begins to exist
+    json:
+      property_name: startTime
+
+  - name: End Date and Time
+    description: For objects that cease to exist after a certain time, the time that the object ceases to exist
+    json:
+      property_name: endTime
 
