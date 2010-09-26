@@ -634,7 +634,7 @@ activity_components:
       specification_anchor: startEndTime
 
   - name: Location
-    description: An object construct representing the location at which the activity occured.
+    description: An object construct representing the location at which the activity occurred.
     specification_anchor: location
     json:
       property_name: location
