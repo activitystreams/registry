@@ -182,7 +182,7 @@ object_types:
 activity_components:
 
   - name: Location
-    description: An object construct representing the location at which the activity occured.
+    description: An object construct representing the location at which the activity occurred.
     specification_anchor: anchor6
 
   - name: Mood
