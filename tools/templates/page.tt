@@ -1,0 +1,6 @@
+---
+layout: registry
+---
+[% IF page_title %]<h2>[% page_title | html %]</h2>[% END %]
+
+[% content %]

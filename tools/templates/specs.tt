@@ -1,0 +1,28 @@
+[% WRAPPER "page.tt"
+    page_title = "Registered Specifications"
+%]
+
+<section>
+<h3>Published Specifications</h3>
+
+[% INCLUDE "modules/specs-list.tt"
+    specs = specs.published
+%]
+
+</section>
+
+<section>
+<h3>Draft Specifications</h3>
+
+<aside class="warning">
+<p>Since these specifications are still in draft, their
+registry information is subject to change.</p>
+</aside>
+
+[% INCLUDE "modules/specs-list.tt"
+    specs = specs.draft
+%]
+
+</section>
+
+[% END %]

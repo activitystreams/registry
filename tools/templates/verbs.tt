@@ -1,0 +1,28 @@
+[% WRAPPER "page.tt"
+    page_title = "Verbs"
+%]
+
+<p>The following verbs are currently registered:</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Identifier</th>
+<th>Specification</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+[% FOREACH term IN verbs %]
+<tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
+<td class="termname[% IF term.is_draft %] draft[% END %]"><a href="[% term.spec_url | html %]">[% term.name | html %]</a></td>
+<td class="termidentifier"><tt>[% term.identifier | html %]</tt></td>
+<td class="termspec"><a href="[% term.spec.index_url %]">[% term.spec.title | html %]</a></td>
+<td class="termdesc">[% term.description | html %]</td>
+</tr>
+[% END %]
+</tbody>
+</table>
+
+[% END %]
