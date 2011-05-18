@@ -23,7 +23,7 @@
     <tbody>
     [% FOREACH verb IN verbs %]
       <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
-        <td class="name">[% verb.name | html %]</td>
+        <td class="name"><b>[% verb.name | html %]</b></td>
         <td class="property"><code><a href="[% verb.spec_url | html %]">[% verb.identifier | html %]</a></code></td>
         <td class="description">[% verb.description | html %]</td>
       </tr>
@@ -48,7 +48,7 @@
     <tbody>
     [% FOREACH object_type IN object_types %]
       <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
-        <td class="name">[% object_type.name | html %]</td>
+        <td class="name"><b>[% object_type.name | html %]</b></td>
         <td class="property"><code><a href="[% object_type.spec_url | html %]">[% object_type.identifier | html %]</a></code></td>
         <td class="spec">[% object_type.description | html %]</td>
       </tr>
@@ -73,7 +73,7 @@
     <tbody>
     [% FOREACH component IN activity_components %]
       <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
-        <td class="name">[% component.name | html %]</td>
+        <td class="name"><b>[% component.name | html %]</b></td>
         <td class="property">[% IF component.json_property_name %]<code><a href="[% component.json_spec_url %]">[% component.json_property_name | html %]</a></code>[% END %]</td>
         <td class="description">[% component.description | html %]</td>
       </tr>
@@ -99,7 +99,7 @@
     <tbody>
     [% FOREACH component IN object_components %]
       <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
-        <td class="name">[% component.name | html %]</td>
+        <td class="name"><b>[% component.name | html %]</b></td>
         <td class="property">[% IF component.json_property_name %]<code><a href="[% component.json_spec_url %]">[% component.json_property_name | html %]</a></code>[% END %]</td>
         <td class="description">[% component.description | html %]</td>
       </tr>

@@ -16,7 +16,7 @@
   <tbody>
   [% FOREACH component IN components %]
     <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %][% IF component.is_draft %] draft[% END %]">
-      <td class="name">[% component.name | html %]</td>
+      <td class="name"><b>[% component.name | html %]</b></td>
       <td class="property">[% IF component.json_property_name %]<code><a href="[% component.json_spec_url | html %]">[% component.json_property_name | html %]</a></code>[% END %]</td>
       <td class="spec"><a href="[% component.spec.index_url | html %]">[% component.spec.title | html %]</a></td>
       <td class="description">[% component.description | html %]</td>
