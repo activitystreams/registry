@@ -1,9 +1,9 @@
 ---
-identifier: activity-concepts
-title: Activity Streams Concepts and Representations
-specification_url: http://activitystrea.ms/head/json-activity.html
-status: draft
-date: 2010-07-05
+identifier: json-activity
+title: JSON Activity Streams 1.0
+specification_url: http://activitystrea.ms/specs/json/1.0/
+status: published
+date: 2011-03-17
 
 verbs:
 
@@ -14,182 +14,187 @@ verbs:
 
 activity_components:
 
-  - name: Icon
-    description: A URI of a small image that provides a visual representation of the activity.
-    specification_anchor: activity.icon
-    json:
-      property_name: iconUrl
-      specification_anchor: json.activity.full
-
-  - name: Time
-    description: The time at which the activity occured.
-    specification_anchor: activity.time
-    json:
-      property_name: postedTime
-      specification_anchor: json.activity.full
-
   - name: Actor
-    description: An object construct that describes who or what performed the action that this activity describes.
-    specification_anchor: activity.actor
+    description: An Object that describes the entity that performed the activity.
+    specification_anchor: activity
     json:
       property_name: actor
-      specification_anchor: json.activity.full
+      specification_anchor: activity
 
-  - name: Verb
-    description: A verb keyword that identifies the type of action performed.
-    specification_anchor: activity.verb
+  - name: Content
+    description: Natural-language description of the activity encoded as a single JSON String containing HTML markup. Visual elements such as thumbnail images MAY be included.
+    specification_anchor: activity
     json:
-      property_name: verb
-      specification_anchor: json.activity.full
+      property_name: content
+      specification_anchor: activity
+
+  - name: Generator
+    description: An Object that describes the application that generated the activity.
+    specification_anchor: activity
+    json:
+      property_name: generator
+      specification_anchor: activity
+
+  - name: Icon
+    description: A Media Link that describes a resource providing a visual representation of the object, intended for human consumption.
+    specification_anchor: activity
+    json:
+      property_name: icon
+      specification_anchor: activity
+
+  - name: ID
+    description: Provides a permanent, universally unique identifier for the activity in the form of an absolute IRI.
+    specification_anchor: activity
+    json:
+      property_name: id
+      specification_anchor: activity
 
   - name: Object
     description: An object construct that describes the primary object of the activity.
-    specification_anchor: activity.object
+    specification_anchor: activity
     json:
       property_name: object
-      specification_anchor: json.activity.full
+      specification_anchor: activity
 
-  - name: Target
-    description: An object construct that describes the object to which the activity was performed.
-    specification_anchor: activity.target
+  - name: Published
+    description: The date and time at which the activity was published.
+    specification_anchor: activity
     json:
-      property_name: target
-      specification_anchor: json.activity.full
+      property_name: published
+      specification_anchor: activity
 
-  - name: Generator
-    description: An object construct that represents the application that was used to perform the activity.
-    specification_anchor: activity.generator
-    json:
-      property_name: generator
-      specification_anchor: json.activity.full
-
-  - name: Service Provider
-    description: An object construct that represents the service that is publishing the activity.
-    specification_anchor: activity.provider
+  - name: Provider
+    description: An object construct that describes the application that published the activity.
+    specification_anchor: activity
     json:
       property_name: provider
-      specification_anchor: json.activity.full
+      specification_anchor: activity
+
+  - name: Target
+    description: An Object that describes the target of the activity. The precise meaning of the activity target is dependent on the activities verb, but will often be the object the English preposition "to".
+    specification_anchor: activity
+    json:
+      property_name: target
+      specification_anchor: activity
 
   - name: Title
-    description: An HTML representation of the natural language title for the activity.
-    specification_anchor: activity.title
+    description: Natural-language title or headline for the activity encoded as a single JSON String containing HTML markup.
+    specification_anchor: activity
     json:
       property_name: title
-      specification_anchor: json.activity.full
+      specification_anchor: activity
 
-  - name: Body
-    description: An HTML representation of a natural language description of the activity.
-    specification_anchor: activity.body
+  - name: Updated
+    description: The date and time at which the activity was modified.
+    specification_anchor: activity
     json:
-      property_name: body
-      specification_anchor: json.activity.full
+      property_name: updated
+      specification_anchor: activity
 
-  - name: Standard Link
-    description: A standard hypertext link whose source is the activity.
-    specification_anchor: activity.standard-link
+  - name: URL
+    description: An IRI identifying a resource providing an HTML representation of the activity.
+    specification_anchor: activity
     json:
-      property_name: links
-      specification_anchor: json.activity.full
+      property_name: url
+      specification_anchor: activity
+
+  - name: Verb
+    description: Identifies the action that the activity describes.
+    specification_anchor: activity
+    json:
+      property_name: verb
+      specification_anchor: activity
 
 object_components:
 
-  - name: ID
-    description: An absolute URI that uniquely identifies the object.
+  - name: Attachments
+    description: A collection of one or more additional, associated objects, similar to the concept of attached files in an email message.
+    specification_anchor: object
     json:
-      property_name: id
-      specification_anchor: json.object.full
-    specification_anchor: object.id
+      property_name: attachments
+      specification_anchor: object
 
-  - name: Name
-    description: A human readable display name for the object, if the object has a name.
+  - name: Author
+    description: An Object that describes the entity that created or authored the object.  Note that the author field identifies the entity that created the object and does not necessarily identify the entity that published the object.
+    specification_anchor: object
+    json:
+      property_name: author
+      specification_anchor: object
+
+  - name: Content
+    description: Natural-language description of the object encoded as a single JSON String containing HTML markup.
+    specification_anchor: object
+    json:
+      property_name: content
+      specification_anchor: object
+
+  - name: Display Name
+    description: A natural-language, human-readable and plain-text name for the object. HTML markup MUST NOT be included.
+    specification_anchor: object
     json:
       property_name: displayName
-      specification_anchor: json.object.full
-    specification_anchor: object.name
+      specification_anchor: object
 
-  - name: Summary
-    description: A human-readable description or summary of the object.
-    json:
-      property_name: summary
-      specification_anchor: json.object.full
-    specification_anchor: object.summary
-
-  - name: Representative Image
-    description: A media link construct that identifies an image resource which provides a visual representation of the object.
-    json:
-      property_name: image
-      specification_anchor: json.object.full
-    specification_anchor: object.image
-
-  - name: Permalink URL
-    description: The URI of a resource which provides an HTML representation of the object.
-    json:
-      property_name: link
-      specification_anchor: json.object.full
-    specification_anchor: object.permalink
-
-  - name: Object Type
-    description: An object type keyword that identifies the type of the object.
-    json:
-      property_name: objectType
-      specification_anchor: json.object.full
-    specification_anchor: object.object-type
-
-  - name: In Reply To Object
-    description: An object construct that this object is a response to.
-    json:
-      property_name: inReplyTo
-      specification_anchor: json.object.full
-    specification_anchor: object.in-reply-to-object
-
-  - name: Attached Object
-    description: An object construct that is attached to this object.
-    json:
-      property_name: attachedObjects
-      specification_anchor: json.object.full
-    specification_anchor: object.attached-object
-
-  - name: Reply Object
-    description: An object construct that has this object as its in reply to object.
-    json:
-      property_name: replies
-      specification_anchor: json.object.full
-    specification_anchor: object.reply
-
-  - name: Reaction Activity
-    description: An activity construct that describes an activity whose object is this object.
-    json:
-      property_name: reactions
-      specification_anchor: json.object.full
-    specification_anchor: object.reaction
-
-  - name: Action Link
-    description: An action link construct representing an action that a human could perform on this object.
-    json:
-      property_name: actionLinks
-      specification_anchor: json.object.full
-    specification_anchor: object.action-link
-
-  - name: Upstream Duplicate ID
-    description: A string containing the ID value of another object construct for which this object is a duplicate created by re-publishing.
-    json:
-      property_name: upstreamDuplicates
-      specification_anchor: json.object.full
-    specification_anchor: object.upstream-duplicate-id
-
-  - name: Downstream Duplicate ID
-    description: A string containing the ID value of another object construct which is a duplicate of this object created by re-publishing.
+  - name: Downstream Duplicates
+    description: A JSON Array of one or more absolute IRIs identifying objects that duplicate this object's content.
+    specification_anchor: object
     json:
       property_name: downstreamDuplicates
-      specification_anchor: json.object.full
-    specification_anchor: object.downstream-duplicate-id
+      specification_anchor: object
 
-  - name: Standard Link
-    description: A standard hypertext link whose source is the object.
-    specification_anchor: object.standard-link
+  - name: ID
+    description: An absolute URI that uniquely identifies the object.
+    specification_anchor: object
     json:
-      property_name: links
-      specification_anchor: json.object.full
+      property_name: id
+      specification_anchor: object
 
+  - name: Image
+    description: A Media Link that describes a resource providing a visual representation of the object, intended for human consumption.
+    specification_anchor: object
+    json:
+      property_name: image
+      specification_anchor: object
 
+  - name: Object Type
+    description: Identifies the type of object.
+    specification_anchor: object
+    json:
+      property_name: objectType
+      specification_anchor: object
+
+  - name: Published
+    description: The date and time at which the object was published.
+    specification_anchor: activity
+    json:
+      property_name: published
+      specification_anchor: activity
+
+  - name: Summary
+    description: Natural-language summarization of the object encoded as a single JSON String containing HTML markup.
+    specification_anchor: object
+    json:
+      property_name: summary
+      specification_anchor: object
+
+  - name: Updated
+    description: The date and time at which the object was modified.
+    specification_anchor: object
+    json:
+      property_name: updated
+      specification_anchor: object
+
+  - name: Upstream Duplicates
+    description: A JSON Array of one or more absolute IRIs identifying objects that duplicate this object's content.
+    specification_anchor: object
+    json:
+      property_name: upstreamDuplicates
+      specification_anchor: object
+
+  - name: URL
+    description: An IRI identifying a resource providing an HTML representation of the object.
+    specification_anchor: object
+    json:
+      property_name: url
+      specification_anchor: object
 
