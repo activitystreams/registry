@@ -4,25 +4,25 @@
 
 <p>The following object components are currently registered:</p>
 
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>JSON Property</th>
-<th>Specification</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-[% FOREACH component IN components %]
-<tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
-<td class="componentname[% IF component.is_draft %] draft[% END %]"><a href="[% component.spec_url | html %]">[% component.name | html %]</a></td>
-<td class="componentjson">[% IF component.json_property_name %]<tt><a href="[% component.json_spec_url | html %]">[% component.json_property_name | html %]</a></tt>[% END %]</td>
-<td class="componentspec"><a href="[% component.spec.index_url | html %]">[% component.spec.title | html %]</a></td>
-<td class="componentdesc">[% component.description | html %]</td>
-</tr>
-[% END %]
-</tbody>
+<table class="object-components">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>JSON Property</th>
+      <th>Specification</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  [% FOREACH component IN components %]
+    <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %][% IF component.is_draft %] draft[% END %]">
+      <td class="name"><b>[% component.name | html %]</b></td>
+      <td class="property">[% IF component.json_property_name %]<code><a href="[% component.json_spec_url | html %]">[% component.json_property_name | html %]</a></code>[% END %]</td>
+      <td class="spec"><a href="[% component.spec.index_url | html %]">[% component.spec.title | html %]</a></td>
+      <td class="description">[% component.description | html %]</td>
+    </tr>
+  [% END %]
+  </tbody>
 </table>
 
 [% END %]

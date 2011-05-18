@@ -1,17 +1,16 @@
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Date</th>
-</tr>
-</thead>
-<tbody>
-[% FOREACH spec IN specs %]
-<tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
-<td class="specname"><a href="[% spec.index_url | html %]">[% spec.title | html %]</a></td>
-<td class="specdate">[% spec.date | html %]</td>
-</tr>
-[% END %]
-</tbody>
+<table class="specs">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  [% FOREACH spec IN specs %]
+    <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
+    <td class="name"><a href="[% spec.index_url | html %]">[% spec.title | html %]</a></td>
+    <td class="date">[% spec.date | html %]</td>
+  </tr>
+  [% END %]
+  </tbody>
 </table>
-

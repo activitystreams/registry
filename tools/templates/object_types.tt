@@ -4,25 +4,25 @@
 
 <p>The following object types are currently registered:</p>
 
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Identifier</th>
-<th>Specification</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-[% FOREACH term IN object_types %]
-<tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %]">
-<td class="termname[% IF term.is_draft %] draft[% END %]"><a href="[% term.spec_url | html %]">[% term.name | html %]</a></td>
-<td class="termidentifier"><tt>[% term.identifier | html %]</tt></td>
-<td class="termspec"><a href="[% term.spec.index_url %]">[% term.spec.title | html %]</a></td>
-<td class="termdesc">[% term.description | html %]</td>
-</tr>
-[% END %]
-</tbody>
+<table class="object-types">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Identifier</th>
+      <th>Specification</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  [% FOREACH term IN object_types %]
+    <tr class="[% IF loop.index % 2 == 1 %]even[% ELSE %]odd[% END %][% IF term.is_draft %] draft[% END %]">
+      <td class="name">[% term.name | html %]</td>
+      <td class="property"><code><a href="[% term.spec_url | html %]">[% term.identifier | html %]</a></code></td>
+      <td class="spec"><a href="[% term.spec.index_url %]">[% term.spec.title | html %]</a></td>
+      <td class="description">[% term.description | html %]</td>
+    </tr>
+  [% END %]
+  </tbody>
 </table>
 
 [% END %]
