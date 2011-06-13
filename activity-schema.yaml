@@ -111,8 +111,8 @@ verbs:
     identifier: rsvp-yes
     description: The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors SHOULD be prepared to handle other object types as meaning MAY be provided by extension specifications. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.
     specification_anchor: verbs
- 
-   - name: save
+
+  - name: save
     identifier: save
     description: Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be  shared publicly, the implication is that the object has been saved  primarily for the actor's own benefit rather than to show it to  others as would be indicated by the "share" verb.
     specification_anchor: verbs
@@ -137,12 +137,12 @@ verbs:
     description: Indicates that the actor has removed the object from the collection of favorited items.
     specification_anchor: verbs
  
-   - name: unlike
+  - name: unlike
     identifier: unlike
     description: Indicates that the actor has removed the object from the collection of liked items.
     specification_anchor: verbs
  
-   - name: unsave
+  - name: unsave
     identifier: unsave
     description: Indicates that the actor has removed the object from the collection of saved items.
     specification_anchor: verbs
