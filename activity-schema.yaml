@@ -164,35 +164,45 @@ object_types:
     description: An item of audio content
     specification_anchor: audio
 
+  - name: Badge
+    identifier: badge
+    description: A badge or award given to an entity
+    specification_anchor: badge
+
   - name: Bookmark
     identifier: bookmark
     description: A pointer to a URL
     specification_anchor: bookmark
 
+  - name: Collection
+    identifier: collection
+    description: A generic collection of objects of any type.
+    specification_anchor: collection
+
   - name: Comment
     identifier: comment
     description: A textual response to another object
     specification_anchor: comment
+    
+  - name: Event
+    identifier: event
+    description: An event that occurs in a certain place during a particular interval of time
+    specification_anchor: event
 
   - name: File
     identifier: file
     description: A document or other file with no additional machine-readable semantics
     specification_anchor: file
 
-  - name: Folder
-    identifier: folder
-    description: A collection of files or media objects
-    specification_anchor: folder
-
   - name: Group
     identifier: group
     description: A social networking group
     specification_anchor: group
 
-  - name: List
-    identifier: list
-    description: A collection of related objects
-    specification_anchor: list
+  - name: Image
+    identifier: image
+    description: A graphical image
+    specification_anchor: image
 
   - name: Note
     identifier: note
@@ -204,30 +214,20 @@ object_types:
     description: A user account
     specification_anchor: person
 
-  - name: Photo
-    identifier: photo
-    description: A graphical still image
-    specification_anchor: photo
-
-  - name: Photo Album
-    identifier: photo-album
-    description: A collection of images
-    specification_anchor: photo-album
-
   - name: Place
     identifier: place
-    description: A location on earth
+    description: A location on Earth. 
     specification_anchor: place
-
-  - name: Playlist
-    identifier: playlist
-    description: An ordered list of time-based media items
-    specification_anchor: playlist
 
   - name: Product
     identifier: product
     description: A commercial good or service
     specification_anchor: product
+
+  - name: Question
+    identifier: question
+    description: A question or poll
+    specification_anchor: question
 
   - name: Review
     identifier: review
@@ -239,25 +239,10 @@ object_types:
     description: Something that provides a service to others
     specification_anchor: service
 
-  - name: Status
-    identifier: status
-    description: "A human-readable update of the author's situation, mood, location or other status"
-    specification_anchor: status
-
   - name: Video
     identifier: video
     description: An item of video content
     specification_anchor: video
-
-  - name: Event
-    identifier: event
-    description: An event that occurs in a certain place during a particular interval of time
-    specification_anchor: event
-
-  - name: Song
-    identifier: song
-    description: A song or a recording of a song
-    specification_anchor: song
 
 activity_components:
 
@@ -267,73 +252,39 @@ activity_components:
 
   - name: Mood
     description: A human-readable keyword or short phrase describing the mood of the actor at the time the activity was performed.
-    specification_anchor: mood
+    specification_anchor: mood-property
 
+  - name: Rating
+    description: A rating given as a number between 1.0 and 5.0 inclusive with one decimal place of precision. 
+    specification_anchor: rating-property
+
+  - name: Source
+    description: A reference to the original source of an object or activity.
+    specification_anchor: source
+
+  - name: Tags
+    description: A listing of the objects that have been associated with a particular object using the tag verb.
+    specification_anchor: tags-property
 
 object_components:
 
-  - name: Full Content
-    description: A HTML fragment that represents the object excluding its title and author
-    json:
-      property_name: content
+  - name: Location
+    description: An object construct representing the location at which the activity occured.
+    specification_anchor: anchor6
 
-  - name: Full Media Stream
-    description: A media link construct linking to the full-fidelity media asset for a time-based media object
-    json:
-      property_name: stream
-
-  - name: Embed Code
-    description: A HTML fragment that provides a viewer or interactive player for the media asset of a media object
-    json:
-      property_name: embedCode
-
-  - name: Target URL
-    description: For an object that acts as a pointer to a URL, the URL that is the target of the pointer
-    json:
-      property_name: targetUrl
-
-  - name: File URL
-    description: For an object that represents some kind of file, the URL at which the file can be retrieved
-    json:
-      property_name: fileUrl
-
-  - name: MIME Type
-    description: For an object that has a File URL, an advisory MIME type for the resource at that URL
-    json:
-      property_name: mimeType
-
-  - name: Larger Image
-    description: A media link construct for an alternative version of the representative image that is larger and intended for standalone viewing
-    json:
-      property_name: fullImage
-
-  - name: Latitude
-    description: For objects that have a physical presence on earth, the (possibly-approximate) latitude of its current location
-    json:
-      property_name: latitude
-
-  - name: Longitude
-    description: For objects that have a physical presence on earth, the (possibly-approximate) longitude of its current location
-    json:
-      property_name: longitude
+  - name: Mood
+    description: A human-readable keyword or short phrase describing the mood of the actor at the time the activity was performed.
+    specification_anchor: mood-property
 
   - name: Rating
-    description: For objects that represent some kind of opinion, a number representing the overall rating
-    json:
-      property_name: rating
+    description: A rating given as a number between 1.0 and 5.0 inclusive with one decimal place of precision. 
+    specification_anchor: rating-property
 
-  - name: Icon
-    description: A media link construct for a small icon representing the object
-    json:
-      property_name: icon
+  - name: Source
+    description: A reference to the original source of an object or activity.
+    specification_anchor: source
 
-  - name: Start Date and Time
-    description: For objects that exist only after a certain time, the time that the object begins to exist
-    json:
-      property_name: startTime
-
-  - name: End Date and Time
-    description: For objects that cease to exist after a certain time, the time that the object ceases to exist
-    json:
-      property_name: endTime
+  - name: Tags
+    description: A listing of the objects that have been associated with a particular object using the tag verb.
+    specification_anchor: tags-property
 
