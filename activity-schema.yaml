@@ -3,74 +3,154 @@ identifier: activity-schema
 title: Activity Schema
 specification_url: http://activitystrea.ms/head/activity-schema.html
 status: draft
-date: 2010-07-08
+date: 2011-06-13
 
 verbs:
+    
+  - name: add    
+    identifier: add
+    description: Indicates that the actor has added the object to the target. For instance, adding a photo to an album.
+    specification_anchor: verbs
+ 
+  - name: cancel
+    identifier: cancel
+    description: Indicates that the actor has canceled the object. For instance, canceling a calendar event.
+    specification_anchor: verbs
+    
+  - name: checkin
+    identifier: checkin
+    description: Indicates that the actor has checked-in to the object. For instance, a person checking-in to a Place.
+    specification_anchor: verbs
+ 
+  - name: delete
+    identifier: delete
+    description: Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.
+    specification_anchor: verbs
 
-  - name: Mark as Favorite
+  - name: favorite      
     identifier: favorite
-    description: Marking the object as an item of special interest
-    specification_anchor: favorite
+    description: Indicates that the actor marked the object as an item of special interest.
+    specification_anchor: verbs
 
-  - name: Start Following
+  - name: follow
     identifier: follow
-    description: Starting to follow the object
-    specification_anchor: follow
+    description: Indicates that the actor began following the activity of the object. In most cases, the object will be a Person, but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical "follow" activities.
+    specification_anchor: verbs
+    
+  - name: give
+    identifier: give
+    description: Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.
+    specification_anchor: verbs
 
-  - name: Mark as Liked
-    identifier: like
-    description: Indicating that one likes the object
-    specification_anchor: like
+  - name: ignore        
+    identifier: ignore
+    description: Indicates that the actor has ignored the object. For instance,  this verb may be used when an actor has ignored a friend request, in which case the object may be the request-friend activity.
+    specification_anchor: verbs
+        
+  - name: invite
+    identifier: invite
+    description: Indicates that the actor has invited the object, typically a  person object, to join or participate in the object described by the target. The target could, for instance, be an event, group or a service.
+    specification_anchor: verbs
 
-  - name: Make Friend
-    identifier: make-friend
-    description: Creating a friendship relationship that is reciprocated by the object
-    specification_anchor: make-friend
-
-  - name: Join
+  - name: join
     identifier: join
-    description: Becoming a member of the object
-    specification_anchor: join
+    description: Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when its object is a group, though implementors SHOULD be prepared to handle other Object types a meaning MAY be provided by extension specifications. Processors MAY ignore (silently drop) successive identical "join" activities.
+    specification_anchor: verbs
 
-  - name: Play
+  - name: leave
+    identifier: leave
+    description: Indicates that the actor has left the object. For instance a Person leaving a Group or checking-out of a Place.
+    specification_anchor: verbs
+
+  - name: like
+    identifier: like
+    description: Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical.
+    specification_anchor: verbs
+
+  - name: make-friend
+    identifier: make-friend
+    description: Indicates the creation of a friendship that is reciprocated by  the object. Since this verb implies an activity on the part of its object, processors MUST NOT accept activities with this verb unless they are able to verify through some external means that there is in fact a reciprocated connection. For example, a processor may have received a guarantee from a particular publisher that the publisher will only use this Verb in cases where a reciprocal relationship exists.
+    specification_anchor: verbs
+
+  - name: play
     identifier: play
-    description: Spending some time enjoying the object
-    specification_anchor: play
+    description: Indicates that the actor spent some time enjoying the object. For example, if the object is a video this indicates that the subject  watched all or part of the video.
+    specification_anchor: verbs
 
-  - name: Save
-    identifier: save
-    description: Calling out the object as being of interest primarily to the actor
-    specification_anchor: save
+  - name: receive
+    identifier: receive
+    description: Indicates that the actor is receiving an object. Examples include a person receiving a badge object. The object identifies the object being received.
+    specification_anchor: verbs
 
-  - name: Share
-    identifier: share
-    description: Calling out the object to attract others to it
-    specification_anchor: share
+  - name: remove
+    identifier: remove
+    description: Indicates that the actor has removed the object from the target.
+    specification_anchor: verbs
 
-  - name: Tag
-    identifier: tag
-    description: Identifying the presence of the object inside the target
-    specification_anchor: tag
+  - name: remove-friend
+    identifier: remove-friend
+    description: Indicates that the actor has removed the object from the collection of friends.
+    specification_anchor: verbs
 
-  - name: Update
-    identifier: update
-    description: Modifying the object
-    specification_anchor: update
+  - name: request-friend
+    identifier: request-friend
+    description: Indicates the creation of a friendship that has not yet been reciprocated by  the object.
+    specification_anchor: verbs
 
-  - name: Positive RSVP
-    identifier: rsvp-yes
-    description: Indicating a positive RSVP for the object
-    specification_anchor: rsvp-yes
+  - name: rsvp-maybe
+    identifier: rsvp-maybe 
+    description: The "possible RSVP" verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors SHOULD be prepared to handle other object types as meaning MAY be provided by extension specifications. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.
+    specification_anchor: verbs
 
-  - name: Possible RSVP
-    identifier: rsvp-maybe
-    description: Indicating a possible RSVP for the object
-    specification_anchor: rsvp-maybe
-
-  - name: Negative RSVP
+  - name: rsvp-no
     identifier: rsvp-no
-    description: Indicating a negative RSVP for the object
-    specification_anchor: rsvp-no
+    description: The "negative RSVP" verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors SHOULD be prepared to handle other object types as meaning MAY be provided by extension specifications. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.
+    specification_anchor: verbs
+
+  - name: rsvp-yes
+    identifier: rsvp-yes
+    description: The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors SHOULD be prepared to handle other object types as meaning MAY be provided by extension specifications. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.
+    specification_anchor: verbs
+ 
+   - name: save
+    identifier: save
+    description: Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be  shared publicly, the implication is that the object has been saved  primarily for the actor's own benefit rather than to show it to  others as would be indicated by the "share" verb.
+    specification_anchor: verbs
+
+  - name: share
+    identifier: share
+    description: Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.
+    specification_anchor: verbs
+
+  - name: stop-following
+    identifier: stop-following
+    description: Indicates that the actor has stopped following the object.
+    specification_anchor: verbs
+
+  - name: tag
+    identifier: tag
+    description: Indicates that the actor has identified the presence of a target inside another object. For example, the actor may have specified that a particular user appears in a photo. The target of the "tag" verb gives the object in which the tag has been added. For example, if a user appears in a photo, the object is the user and the target is the photo.
+    specification_anchor: verbs
+
+  - name: unfavorite
+    identifier: unfavorite
+    description: Indicates that the actor has removed the object from the collection of favorited items.
+    specification_anchor: verbs
+ 
+   - name: unlike
+    identifier: unlike
+    description: Indicates that the actor has removed the object from the collection of liked items.
+    specification_anchor: verbs
+ 
+   - name: unsave
+    identifier: unsave
+    description: Indicates that the actor has removed the object from the collection of saved items.
+    specification_anchor: verbs
+
+  - name: update
+    identifier: update
+    description: The "update" verb indicates that the actor has modified the object. Implementors SHOULD use verbs such as "post" where the actor is adding new items to a collection or similar. Update is reserved for modifications to existing object or data such as changing a user's profile information.
+    specification_anchor: verbs
 
 object_types:
 
