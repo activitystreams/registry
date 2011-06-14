@@ -1,0 +1,108 @@
+---
+identifier: activity-streams-replies
+title: Responses for Activity Streams
+specification_url: http://activitystrea.ms/specs/json/1.0/
+status: draft
+date: 2011-06-14
+
+activity_components:
+
+  - name: In Reply To
+    description: Array of Objects for which the containing activity or object is a response
+    specification_anchor: stream
+    json:
+      property_name: inReplyTo
+      specification_anchor: stream
+
+object_components:
+
+  - name: Attending
+    description: Used to provide information about the collection of actors that have responded to an event using the rsvp-yes verb.
+    specification_anchor: stream
+    json:
+      property_name: attending
+      specification_anchor: stream
+        
+  - name: Followers
+    description: Used to provide information about the collection of objects (typically person objects) that are "following" the containing object.
+    specification_anchor: stream
+    json:
+      property_name: followers
+      specification_anchor: stream
+        
+  - name: Following
+    description: Used to provide information about the collection of objects that this object is "following".
+    specification_anchor: stream
+    json:
+      property_name: following
+      specification_anchor: stream
+        
+  - name: Friends
+    description: Used to provide information about the collection of objects with which a "friendship" relationship has been established using the make-friend verb. This property will typically only be relevant for the person object type.
+    specification_anchor: stream
+    json:
+      property_name: friends
+      specification_anchor: stream
+        
+  - name: Friend Requests
+    description: Used to provide information about the collection of objects with which a "friendship" relationship is being requested using the request-friend verb. This property will typically only be relevant for the person object type.
+    specification_anchor: stream
+    json:
+      property_name: friend-requests
+      specification_anchor: stream
+        
+  - name: Likes
+    description: Used to provide information about the actors (typically person objects) that have favorited or liked the containing object.
+    specification_anchor: stream
+    json:
+      property_name: likes
+      specification_anchor: stream
+        
+  - name: Not Attending
+    description: Used to provide information about the collection of actors that have responded to an event using the rsvp-no verb.
+    specification_anchor: stream
+    json:
+      property_name: notAttending
+      specification_anchor: stream
+        
+  - name: Maybe Attending
+    description: Used to provide information about the collection of actors that have responded to an event using the rsvp-maybe verb.
+    specification_anchor: stream
+    json:
+      property_name: maybeAttending
+      specification_anchor: stream
+        
+  - name: Members
+    description: Used to provide information about the actors (typically person objects) that have "joined" the containing object. This is typically only useful for object types that represent groups.
+    specification_anchor: stream
+    json:
+      property_name: members
+      specification_anchor: stream
+        
+  - name: Replies
+    description: Used to provide information about the thread of discussion associated with a given object. Typically, the objects contained will have an implied inReplyTo property value equal to the object containing the replies property.
+    specification_anchor: stream
+    json:
+      property_name: replies
+      specification_anchor: stream
+        
+  - name: Reviews
+    description: Used to provide information about reviews available for the containing object.
+    specification_anchor: stream
+    json:
+      property_name: reviews
+      specification_anchor: stream
+        
+  - name: Saves
+    description: Used to provide information about the actors (typically person objects) that have "saved" the containing object.
+    specification_anchor: stream
+    json:
+      property_name: saves
+      specification_anchor: stream
+        
+  - name: Shares
+    description: Used to provide information about the actors (typically person objects) that have "shared" the containing object. 
+    specification_anchor: stream
+    json:
+      property_name: shares   
+      specification_anchor: stream  

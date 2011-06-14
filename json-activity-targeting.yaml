@@ -1,0 +1,36 @@
+---
+identifier: activity-streams-target
+title: Audience Targeting for JSON Activity Streams
+specification_url: http://activitystrea.ms/specs/json/1.0/
+status: draft
+date: 2011-06-14
+
+activity_components:
+
+  - name: To
+    description: Array of Objects specifying the public primary audience of an activity.
+    specification_anchor: properties
+    json:
+      property_name: to
+      specification_anchor: properties
+
+  - name: CC
+    description: Array of Objects specifying the public secondary audience of an activity.
+    specification_anchor: properties
+    json:
+      property_name: cc
+      specification_anchor: properties
+
+  - name: BTO
+    description: Array of Objects specifying the private primary audience of an activity.
+    specification_anchor: properties
+    json:
+      property_name: bto
+      specification_anchor: properties
+
+  - name: BCC
+    description: Array of Objects specifying the private secondary audience of an activity.
+    specification_anchor: properties
+    json:
+      property_name: bcc
+      specification_anchor: properties

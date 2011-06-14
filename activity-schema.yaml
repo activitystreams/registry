@@ -248,23 +248,38 @@ activity_components:
 
   - name: Location
     description: An object construct representing the location at which the activity occured.
-    specification_anchor: anchor6
+    specification_anchor: location
+    json:
+      property_name: location
+      specification_anchor: location
 
   - name: Mood
     description: A human-readable keyword or short phrase describing the mood of the actor at the time the activity was performed.
     specification_anchor: mood-property
+    json:
+      property_name: mood
+      specification_anchor: mood-property
 
   - name: Rating
     description: A rating given as a number between 1.0 and 5.0 inclusive with one decimal place of precision. 
     specification_anchor: rating-property
+    json:
+      property_name: rating
+      specification_anchor: rating-property
 
   - name: Source
     description: A reference to the original source of an object or activity.
     specification_anchor: source
+    json:
+      property_name: source
+      specification_anchor: source
 
   - name: Tags
     description: A listing of the objects that have been associated with a particular object using the tag verb.
     specification_anchor: tags-property
+    json:
+      property_name: tags
+      specification_anchor: tags-property
 
 object_components:
 
