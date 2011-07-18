@@ -12,6 +12,13 @@ verbs:
     description: The act of authoring an object and then publishing it online.
     specification_anchor: post-verb
 
+object_types:
+
+  - name: Activity
+    identifier: activity
+    description: An object representation of an activity.
+    specification_anchor: activity-object
+
 activity_components:
 
   - name: Actor
