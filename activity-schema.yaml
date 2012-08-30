@@ -667,6 +667,55 @@ activity_components:
     json:
       property_name: tags
       specification_anchor: tags-property
+      
+  - name: Dublin Core
+    description: Dublin Core Metadata related to the object (http://dublincore.org)
+    specification_anchor: dc
+    json:
+      property_name: dc
+      specification_anchor: dc
+  
+  - name: GeoJSON
+    description: GeoJSON Metadata related to the object (http://www.geojson.org/geojson-spec.html)
+    specification_anchor: geojson
+    json:
+      property_name: geojson
+      specification_anchor: geojson
+    
+  - name: Linked Data for JSON
+    description: JSON-LD Metadata related to the object (http://json-ld.org)
+    specification_anchor: ld
+    json:
+      property_name: ld
+      specification_anchor: ld
+    
+  - name: Links
+    description: Links associated with the object
+    specification_anchor: links
+    json:
+      property_name: links
+      specification_anchor: links
+  
+  - name: OData
+    description: OData Metadata related to the object (http://www.odata.org)
+    specification_anchor: odata
+    json:
+      property_name: odata
+      specification_anchor: odata
+    
+  - name: OpenGraph
+    description: OpenGraph Metadata related to the object (http://developers.facebook.com/docs/opengraph)
+    specification_anchor: opengraph
+    json:
+      property_name: opengraph
+      specification_anchor: opengraph
+  
+  - name: Schema.org
+    description: Schema.org Metadata related to the object (http://schema.org)
+    specification_anchor: schema_org
+    json:
+      property_name: schema_org
+      specification_anchor: schema_org
 
 object_components:
 
@@ -718,6 +767,56 @@ object_components:
     json:
       property_name: tags
       specification_anchor: tags-property
+      
+  - name: Dublin Core
+    description: Dublin Core Metadata related to the object (http://dublincore.org)
+    specification_anchor: dc
+    json:
+      property_name: dc
+      specification_anchor: dc
+  
+  - name: GeoJSON
+    description: GeoJSON Metadata related to the object (http://www.geojson.org/geojson-spec.html)
+    specification_anchor: geojson
+    json:
+      property_name: geojson
+      specification_anchor: geojson
+    
+  - name: Linked Data for JSON
+    description: JSON-LD Metadata related to the object (http://json-ld.org)
+    specification_anchor: ld
+    json:
+      property_name: ld
+      specification_anchor: ld
+    
+  - name: Links
+    description: Links associated with the object
+    specification_anchor: links
+    json:
+      property_name: links
+      specification_anchor: links
+  
+  - name: OData
+    description: OData Metadata related to the object (http://www.odata.org)
+    specification_anchor: odata
+    json:
+      property_name: odata
+      specification_anchor: odata
+    
+  - name: OpenGraph
+    description: OpenGraph Metadata related to the object (http://developers.facebook.com/docs/opengraph)
+    specification_anchor: opengraph
+    json:
+      property_name: opengraph
+      specification_anchor: opengraph
+  
+  - name: Schema.org
+    description: Schema.org Metadata related to the object (http://schema.org)
+    specification_anchor: schema_org
+    json:
+      property_name: schema_org
+      specification_anchor: schema_org
+
 
 collection_components:
   
@@ -756,40 +855,4 @@ collection_components:
       property_name: startIndex
       specification_anchor: multipage-collections
 
-external_vocabularies:
-  
-  - name: Dublin Core
-    identifier: dc
-    reference: http://dublincore.org
-    specification_anchor: dc
-  
-  - name: GeoJSON
-    identifier: geojson
-    reference: http://www.geojson.org/geojson-spec.html
-    specification_anchor: geojson
-    
-  - name: Linked Data for JSON
-    identifier: ld
-    reference: http://json-ld.org/
-    specification_anchor: ld
-    
-  - name: Links
-    identifier: links
-    reference: http://www.iana.org/assignments/link-relations/link-relations.xml
-    specification_anchor: links
-  
-  - name: OData
-    identifier: odata
-    reference: http://www.odata.org/
-    specification_anchor: odata
-    
-  - name: OpenGraph
-    identifier: opengraph
-    reference: http://developers.facebook.com/docs/opengraph/
-    specification_anchor: opengraph
-  
-  - name: Schema.org
-    identifier: schema_org
-    reference: http://schema.org
-    specification_anchor: schema_org
 
