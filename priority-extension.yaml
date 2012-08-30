@@ -1,0 +1,15 @@
+---
+identifier: priority-extension
+title: JSON Activity Streams Priority Extension
+specification_url: https://raw.github.com/jasnell/specs/master/activitystrea.ms/priority_extension.txt
+status: published
+date: 2012-06-20
+
+activity_components:
+
+  - name: Priority
+    description: Priority is an indicator of the relative priority or importance that the generator of an "activity" object considers the activity to have.
+    specification_anchor: 
+    json:
+      property_name: priority
+      specification_anchor: 

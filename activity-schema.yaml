@@ -1,20 +1,114 @@
 ---
 identifier: activity-schema
 title: Activity Schema
-specification_url: http://activitystrea.ms/head/activity-schema.html
+specification_url: http://activitystrea.ms/specs/json/schema/activity-schema.html
 status: draft
-date: 2011-06-13
+date: 2012-08-30
 
 verbs:
-    
+  - name: accept
+    identifier: accept
+    description: Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment.
+    specification_anchor: verbs
+  
+  - name: access
+    identifier: access
+    description: Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file.
+    specification_anchor: verbs
+  
+  - name: acknowledge
+    identifier: acknowledge
+    description: Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence.
+    specification_anchor: verbs
+  
   - name: add    
     identifier: add
     description: Indicates that the actor has added the object to the target. For instance, adding a photo to an album.
     specification_anchor: verbs
+  
+  - name: agree    
+    identifier: agree
+    description: Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue.
+    specification_anchor: verbs
+  
+  - name: append
+    identifier: append
+    description: Indicates that the actor has appended the object to the target. For instance, a person appending a new record to a database.
+    specification_anchor: verbs
+  
+  - name: approve
+    identifier: approve
+    description: Indicates that the actor has approved the object. For instance, a manager might approve a travel request.
+    specification_anchor: verbs
+    
+  - name: archive
+    identifier: archive
+    description: Indicates that the actor has archived the object.
+    specification_anchor: verbs
  
+  - name: assign
+    identifier: assign
+    description: Indicates that the actor has assigned the object to the target.
+    specification_anchor: verbs
+    
+  - name: at
+    identifier: at
+    description: Indicates that the actor is currently located at the object. For instance, a person being at a specific physical location.
+    specification_anchor: verbs
+ 
+  - name: attach
+    identifier: attach
+    description: Indicates that the actor has attached the object to the target. For instance, a person attaching a file to a wiki page or an email.
+    specification_anchor: verbs
+ 
+  - name: attend
+    identifier: attend
+    description: Indicates that the actor has attended the object. For instance, a person attending a meeting.
+    specification_anchor: verbs
+
+  - name: author
+    identifier: author
+    description: Indicates that the actor has authored the object. Note that this is a more specific form of the verb "create".
+    specification_anchor: verbs
+    
+  - name: authorize
+    identifier: authorize
+    description: Indicates that the actor has authorized the object. If a target is specified, it means that the authorization is specifically in regards to the target. For instance, a service can authorize a person to access a given application; in which case the actor is the service, the object is the person, and the target is the application. In contrast, a person can authorize a request; in which case the actor is the person and the object is the request and there might be no explicit target.
+    specification_anchor: verbs
+
+  - name: borrow
+    identifier: borrow
+    description: Indicates that the actor has borrowed the object. If a target is specified, it identifies the entity from which the object was borrowed. For instance, if a person borrows a book from a library, the person is the actor, the book is the object and the library is the target.
+    specification_anchor: verbs
+
+  - name: build
+    identifier: build
+    description: Indicates that the actor has built the object. For example, if a person builds a model or compiles code.
+    specification_anchor: verbs
+
   - name: cancel
     identifier: cancel
     description: Indicates that the actor has canceled the object. For instance, canceling a calendar event.
+    specification_anchor: verbs
+    
+  - name: close
+    identifier: close
+    description: Indicates that the actor has closed the object. For instance, the object could represent a ticket being tracked in an issue management system.
+    specification_anchor: verbs
+          
+  - name: complete
+    identifier: complete
+    description: Indicates that the actor has completed the object.
+    specification_anchor: verbs
+          
+  - name: confirm
+    identifier: confirm
+    description: Indicates that the actor has confirmed or agrees with the object. For instance, a software developer might confirm an issue reported against a product.
+    specification_anchor: verbs
+              
+  - name: consume
+    identifier: consume
+    description: Indicates that the actor has consumed the object. The specific meaning is dependent largely on the object's type. For instance, an actor may "consume" an audio object, indicating that the actor has listened to it; or an actor may "consume" a book, indicating that the book has been read. As such, the "consume" verb is a more generic form of other more specific verbs such as "read" and "play".
     specification_anchor: verbs
     
   - name: checkin
@@ -22,14 +116,54 @@ verbs:
     description: Indicates that the actor has checked-in to the object. For instance, a person checking-in to a Place.
     specification_anchor: verbs
  
+  - name: create
+    identifier: create
+    description: Indicates that the actor has created the object.
+    specification_anchor: verbs
+ 
   - name: delete
     identifier: delete
     description: Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.
     specification_anchor: verbs
 
+  - name: deliver
+    identifier: deliver
+    description: Indicates that the actor has delivered the object. For example, delivering a package.
+    specification_anchor: verbs
+          
+  - name: deny
+    identifier: deny
+    description: Indicates that the actor has denied the object. For example, a manager may deny a travel request.
+    specification_anchor: verbs
+          
+  - name: disagree
+    identifier: disagree
+    description: Indicates that the actor disagrees with the object.
+    specification_anchor: verbs
+          
+  - name: dislike
+    identifier: dislike
+    description: Indicates that the actor dislikes the object. Note that the "dislike" verb is distinct from the "unlike" verb which assumes that the object had been previously "liked".
+    specification_anchor: verbs
+      
+  - name: experience
+    identifier: experience
+    description: Indicates that the actor has experienced the object in some manner. Note that, depending on the specific object types used for both the actor and object, the meaning of this verb can overlap that of the "consume" and "play" verbs. For instance, a person might "experience" a movie; or "play" the movie; or "consume" the movie. The "experience" verb can be considered a more generic form of other more specific verbs as "consume", "play", "watch", "listen", and "read"
+    specification_anchor: verbs
+
   - name: favorite      
     identifier: favorite
     description: Indicates that the actor marked the object as an item of special interest.
+    specification_anchor: verbs
+
+  - name: find
+    identifier: find
+    description: Indicates that the actor has found the object.
+    specification_anchor: verbs
+
+  - name: flag-as-inappropriate
+    identifier: flag-as-inappropriate
+    description: Indicates that the actor has flagged the object as being inappropriate for some reason. When using this verb, the "context" property can be used to provide additional detail about why the object has been flagged.
     specification_anchor: verbs
 
   - name: follow
@@ -42,11 +176,31 @@ verbs:
     description: Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.
     specification_anchor: verbs
 
+  - name: host
+    identifier: host
+    description: Indicates that the actor is hosting the object. As in hosting an event, or hosting a service.
+    specification_anchor: verbs
+
   - name: ignore        
     identifier: ignore
     description: Indicates that the actor has ignored the object. For instance,  this verb may be used when an actor has ignored a friend request, in which case the object may be the request-friend activity.
     specification_anchor: verbs
-        
+
+  - name: insert
+    identifier: insert
+    description: Indicates that the actor has inserted the object into the target.
+    specification_anchor: verbs
+          
+  - name: install
+    identifier: install
+    description: Indicates that the actor has installed the object, as in installing an application.
+    specification_anchor: verbs
+          
+  - name: interact
+    identifier: interact
+    description: Indicates that the actor has interacted with the object. For instance, when one person interacts with another.
+    specification_anchor: verbs
+
   - name: invite
     identifier: invite
     description: Indicates that the actor has invited the object, typically a  person object, to join or participate in the object described by the target. The target could, for instance, be an event, group or a service.
@@ -67,9 +221,24 @@ verbs:
     description: Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical.
     specification_anchor: verbs
 
+  - name: listen
+    identifier: listen
+    description: Indicates that the actor has listened to the object. This is typically only applicable for objects representing audio content, such as music, an audio-book, or a radio broadcast. The "listen" verb is a more specific form of the "consume", "experience" and "play" verbs.
+    specification_anchor: verbs
+
+  - name: lose
+    identifier: lose
+    description: Indicates that the actor has lost the object. For instance, if a person loses a game.
+    specification_anchor: verbs
+
   - name: make-friend
     identifier: make-friend
     description: Indicates the creation of a friendship that is reciprocated by  the object. Since this verb implies an activity on the part of its object, processors MUST NOT accept activities with this verb unless they are able to verify through some external means that there is in fact a reciprocated connection. For example, a processor may have received a guarantee from a particular publisher that the publisher will only use this Verb in cases where a reciprocal relationship exists.
+    specification_anchor: verbs
+
+  - name: open
+    identifier: open
+    description: Indicates that the actor has opened the object. For instance, the object could represent a ticket being tracked in an issue management system.
     specification_anchor: verbs
 
   - name: play
@@ -77,9 +246,34 @@ verbs:
     description: Indicates that the actor spent some time enjoying the object. For example, if the object is a video this indicates that the subject  watched all or part of the video.
     specification_anchor: verbs
 
+  - name: present
+    identifier: present
+    description: Indicates that the actor has presented the object. For instance, when a person gives a presentation at a conference.
+    specification_anchor: verbs
+
+  - name: purchase
+    identifier: purchase
+    description: Indicates that the actor has purchased the object. If a target is specified, in indicates the entity from which the object was purchased.
+    specification_anchor: verbs
+          
+  - name: qualify
+    identifier: qualify
+    description: Indicates that the actor has qualified for the object. If a target is specified, it indicates the context within which the qualification applies.
+    specification_anchor: verbs
+
+  - name: read
+    identifier: read
+    description: Indicates that the actor read the object. This is typically only applicable for objects representing printed or written content, such as a book, a message or a comment. The "read" verb is a more specific form of the "consume", "experience" and "play" verbs.
+    specification_anchor: verbs
+
   - name: receive
     identifier: receive
     description: Indicates that the actor is receiving an object. Examples include a person receiving a badge object. The object identifies the object being received.
+    specification_anchor: verbs
+
+  - name: reject
+    identifier: reject
+    description: Indicates that the actor has rejected the object.
     specification_anchor: verbs
 
   - name: remove
@@ -92,9 +286,34 @@ verbs:
     description: Indicates that the actor has removed the object from the collection of friends.
     specification_anchor: verbs
 
+  - name: replace
+    identifier: replace
+    description: Indicates that the actor has replaced the target with the object.
+    specification_anchor: verbs
+
+  - name: request
+    identifier: request
+    description: Indicates that the actor has requested the object. If a target is specified, it indicates the entity from which the object is being requested.
+    specification_anchor: verbs
+
   - name: request-friend
     identifier: request-friend
     description: Indicates the creation of a friendship that has not yet been reciprocated by  the object.
+    specification_anchor: verbs
+
+  - name: resolve
+    identifier: resolve
+    description: Indicates that the actor has resolved the object. For instance, the object could represent a ticket being tracked in an issue management system.
+    specification_anchor: verbs
+          
+  - name: return
+    identifier: return
+    description: Indicates that the actor has returned the object. If a target is specified, it indicates the entity to which the object was returned.
+    specification_anchor: verbs
+
+  - name: retract
+    identifier: retract
+    description: Indicates that the actor has retracted the object. For instance, if an actor wishes to retract a previously published activity, the object would be the previously published activity that is being retracted.
     specification_anchor: verbs
 
   - name: rsvp-maybe
@@ -112,9 +331,34 @@ verbs:
     description: The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors SHOULD be prepared to handle other object types as meaning MAY be provided by extension specifications. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.
     specification_anchor: verbs
 
+  - name: satisfy
+    identifier: satisfy
+    description: Indicates that the actor has satisfied the object. If a target is specified, it indicate the context within which the object was satisfied. For instance, if a person satisfies the requirements for a particular challenge, the person is the actor; the requirement is the object; and the challenge is the target.
+    specification_anchor: verbs
+
   - name: save
     identifier: save
-    description: Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be  shared publicly, the implication is that the object has been saved  primarily for the actor's own benefit rather than to show it to  others as would be indicated by the "share" verb.
+    description: Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be shared publicly, the implication is that the object has been saved  primarily for the actor's own benefit rather than to show it to  others as would be indicated by the "share" verb.
+    specification_anchor: verbs
+
+  - name: schedule
+    identifier: schedule
+    description: Indicates that the actor has scheduled the object. For instance, scheduling a meeting.
+    specification_anchor: verbs
+          
+  - name: search
+    identifier: search
+    description: Indicates that the actor is or has searched for the object. If a target is specified, it indicates the context within which the search is or has been conducted.
+    specification_anchor: verbs
+          
+  - name: sell
+    identifier: sell
+    description: Indicates that the actor has sold the object. If a target is specified, it indicates the entity to which the object was sold.
+    specification_anchor: verbs
+          
+  - name: send
+    identifier: send
+    description: Indicates that the actor has sent the object. If a target is specified, it indicates the entity to which the object was sent.
     specification_anchor: verbs
 
   - name: share
@@ -122,14 +366,39 @@ verbs:
     description: Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.
     specification_anchor: verbs
 
+  - name: sponsor
+    identifier: sponsor
+    description: Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc.
+    specification_anchor: verbs
+          
+  - name: start
+    identifier: start
+    description: Indicates that the actor has started the object. For instance, when a person starts a project.
+    specification_anchor: verbs
+
   - name: stop-following
     identifier: stop-following
     description: Indicates that the actor has stopped following the object.
     specification_anchor: verbs
 
+  - name: submit
+    identifier: submit
+    description: Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted.
+    specification_anchor: verbs
+
   - name: tag
     identifier: tag
     description: Indicates that the actor has identified the presence of a target inside another object. For example, the actor may have specified that a particular user appears in a photo. The target of the "tag" verb gives the object in which the tag has been added. For example, if a user appears in a photo, the object is the user and the target is the photo.
+    specification_anchor: verbs
+
+  - name: terminate
+    identifier: terminate
+    description: Indicates that the actor has terminated the object. 
+    specification_anchor: verbs
+          
+  - name: tie
+    identifier: tie
+    description: Indicates that the actor has neither won or lost the object. This verb is generally only applicable when the object represents some form of competition, such as a game.
     specification_anchor: verbs
 
   - name: unfavorite
@@ -141,10 +410,20 @@ verbs:
     identifier: unlike
     description: Indicates that the actor has removed the object from the collection of liked items.
     specification_anchor: verbs
+
+  - name: unsatisfy
+    identifier: unsatisfy
+    description: Indicates that the actor has not satisfied the object. If a target is specified, it indicates the context within which the object was not satisfied. For instance, if a person fails to satisfy the requirements of some particular challenge, the person is the actor; the requirement is the object and the challenge is the target.
+    specification_anchor: verbs
  
   - name: unsave
     identifier: unsave
     description: Indicates that the actor has removed the object from the collection of saved items.
+    specification_anchor: verbs
+
+  - name: unshare
+    identifier: unsahre
+    description: Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.
     specification_anchor: verbs
 
   - name: update
@@ -152,99 +431,207 @@ verbs:
     description: The "update" verb indicates that the actor has modified the object. Implementors SHOULD use verbs such as "post" where the actor is adding new items to a collection or similar. Update is reserved for modifications to existing object or data such as changing a user's profile information.
     specification_anchor: verbs
 
+  - name: use
+    identifier: use
+    description: Indicates that the actor has used the object in some manner.
+    specification_anchor: verbs
+          
+  - name: watch
+    identifier: watch
+    description: Indicates that the actor has watched the object. This verb is typically applicable only when the object represents dynamic, visible content such as a movie, a television show or a public performance. This verb is a more specific form of the verbs "experience", "play" and "consume".
+    specification_anchor: verbs
+          
+  - name: win
+    identifier: win
+    description: Indicates that the actor has won the object. This verb is typically applicable only when the object represents some form of competition, such as a game.
+    specification_anchor: verbs
+
+
 object_types:
+
+  - name: Alert
+    identifier: alert
+    description: Any kind of significant notification.
+    specification_anchor: object-types
+
+  - name: Application
+    identifier: application
+    description: A software application
+    specification_anchor: object-types
 
   - name: Article
     identifier: article
     description: An article, such as a news article, knowledge base entry or similar construct
-    specification_anchor: article
+    specification_anchor: object-types
 
   - name: Audio
     identifier: audio
     description: An item of audio content
-    specification_anchor: audio
+    specification_anchor: object-types
 
   - name: Badge
     identifier: badge
     description: A badge or award given to an entity
-    specification_anchor: badge
+    specification_anchor: object-types
+
+  - name: Binary
+    identifier: binary
+    description: Objects of this type are used to carry arbirary Base64-encoded binary data within an Activity Stream object. It is primarily intended to attach binary data to other types of objects through the use of the "attachments" property.
+    specification_anchor: object-types
 
   - name: Bookmark
     identifier: bookmark
     description: A pointer to a URL
-    specification_anchor: bookmark
+    specification_anchor: object-types
 
   - name: Collection
     identifier: collection
     description: A generic collection of objects of any type.
-    specification_anchor: collection
+    specification_anchor: object-types
 
   - name: Comment
     identifier: comment
     description: A textual response to another object
-    specification_anchor: comment
+    specification_anchor: object-types
+    
+  - name: Device
+    identifier: device
+    description: A device of any time
+    specification_anchor: object-types
     
   - name: Event
     identifier: event
     description: An event that occurs in a certain place during a particular interval of time
-    specification_anchor: event
+    specification_anchor: object-types
 
   - name: File
     identifier: file
     description: A document or other file with no additional machine-readable semantics
-    specification_anchor: file
+    specification_anchor: object-types
+
+  - name: Game
+    identifier: game
+    description: A game or competition of any kind
 
   - name: Group
     identifier: group
     description: A social networking group
-    specification_anchor: group
+    specification_anchor: object-types
 
   - name: Image
     identifier: image
     description: A graphical image
-    specification_anchor: image
+    specification_anchor: object-types
+
+  - name: Issue
+    identifier: issue
+    description: Represents a report about a problem or situation that needs to be resolved. For instance, the issue object can be used to represent reports detailing software defects, or reports of acceptable use violations, and so forth.
+    specification_anchor: object-types
+
+  - name: Job
+    identifier: job
+    description: A job or job posting.
+    specification_anchor: object-types
+
+  - name: Link
+    identifier: link
+    description: A link to another resource
+    specification_anchor: link-objects
 
   - name: Note
     identifier: note
     description: A short-form text message
-    specification_anchor: note
+    specification_anchor: object-types
+    
+  - name: Offer
+    identifier: offer
+    description: An offer of any kind
+    specification_anchor: object-types
+
+  - name: Organization
+    identifier: organization
+    description: An organization of any kind
+    specification_anchor: object-types
+  
+  - name: Page
+    identifier: page
+    description: Represents an area, typically a web page, that is representative of, and generally managed by a particular entity. Such areas are usually dedicated to displaying descriptive information about the entity and showcasing recent content such as articles, photographs and videos. Most social networking applications, for example, provide individual users with their own dedicated "profile" pages. Several allow similar types of pages to be created for commercial entities, organizations or events. While the specific details of how pages are implemented, their characteristics and use may vary, the one unifying property is that they are typically "owned" by a single entity that is represented by the content provided by the page itself.
+    specification_anchor: object-types
 
   - name: Person
     identifier: person
     description: A user account
-    specification_anchor: person
+    specification_anchor: object-types
 
   - name: Place
     identifier: place
     description: A location on Earth. 
-    specification_anchor: place
+    specification_anchor: object-types
+
+  - name: Process
+    identifier: process
+    description: Represents any form of process. For instance, a long-running task that is started and expected to continue operating for a period of time.
+    specification_anchor: object-types
 
   - name: Product
     identifier: product
     description: A commercial good or service
-    specification_anchor: product
+    specification_anchor: object-types
 
   - name: Question
     identifier: question
     description: A question or poll
-    specification_anchor: question
+    specification_anchor: object-types
 
   - name: Review
     identifier: review
     description: A primarily prosed-based commentary on another object
-    specification_anchor: review
+    specification_anchor: object-types
 
   - name: Service
     identifier: service
     description: Something that provides a service to others
-    specification_anchor: service
+    specification_anchor: object-types
+  
+  - name: Task
+    identifier: task
+    description: An activity that has yet to be completed.
+    specification_anchor: object-types
 
   - name: Video
     identifier: video
     description: An item of video content
-    specification_anchor: video
+    specification_anchor: object-types
 
 activity_components:
+
+  - name: Context
+    description: An object construct that provides information about why an activity occurred by describing the context within which it occurred.
+    specification_anchor: context
+    json:
+      property_name: context
+      specification_anchor: context
+  
+  - name: Result
+    description: An object construct that describes the result of an activity.
+    specification_anchor: result
+    json:
+      property_name: result
+      specification_anchor: result
+  
+  - name: Start-Time
+    description: A timestamp indicating the date and time at which the activity was started.
+    specification_anchor: startEndTime
+    json:
+      property_name: startTime
+      specification_anchor: startEndTime
+      
+  - name: End-Time
+    description: A timestamp indicating the date and time at which the activity ended.
+    specification_anchor: startEndTime
+    json:
+      property_name: endTime
+      specification_anchor: startEndTime
 
   - name: Location
     description: An object construct representing the location at which the activity occured.
@@ -283,23 +670,126 @@ activity_components:
 
 object_components:
 
+  - name: Start-Time
+    description: A timestamp indicating the date and time at which the object was started.
+    specification_anchor: startEndTime
+    json:
+      property_name: startTime
+      specification_anchor: startEndTime
+      
+  - name: End-Time
+    description: A timestamp indicating the date and time at which the object ended.
+    specification_anchor: startEndTime
+    json:
+      property_name: endTime
+      specification_anchor: startEndTime
+
   - name: Location
     description: An object construct representing the location at which the activity occured.
-    specification_anchor: anchor6
+    specification_anchor: location
+    json: 
+      property_name: location
+      specification_anchor: location
 
   - name: Mood
     description: A human-readable keyword or short phrase describing the mood of the actor at the time the activity was performed.
     specification_anchor: mood-property
+    json:
+      property_name: mood
+      specification_anchor: mood-property
 
   - name: Rating
     description: A rating given as a number between 1.0 and 5.0 inclusive with one decimal place of precision. 
     specification_anchor: rating-property
+    json: 
+      property_name: rating
+      specification_anchor: rating-property
 
   - name: Source
     description: A reference to the original source of an object or activity.
     specification_anchor: source
+    json:
+      property_name: source
+      specification_anchor: source
 
   - name: Tags
     description: A listing of the objects that have been associated with a particular object using the tag verb.
     specification_anchor: tags-property
+    json:
+      property_name: tags
+      specification_anchor: tags-property
+
+collection_components:
+  
+  - name: itemsAfter
+    description: A timestamp indicating that the items array contains only items published or updated after the date and time specified.
+    specification_anchor: multipage-collections
+    json:
+      property_name: itemsAfter
+      specification_anchor: multipage-collections
+    
+  - name: itemsBefore
+    description: A timestamp indicating that the items array contains only items published or updated before the date and time specified.
+    specification_anchor: multipage-collections
+    json:
+      property_name: itemsBefore
+      specification_anchor: multipage-collections
+  
+  - name: itemsPerPage
+    description: A non-negative integer specifying the maximum number of objects that will be included in the value of the items property.
+    specification_anchor: multipage-collections
+    json:
+      property_name: itemsPerPage
+      specification_anchor: multipage-collections
+
+  - name: links
+    description: Collection of links connecting this collection object to the other collection objects containing additional items that can be considered members of the collection.
+    specification_anchor: multipage-collections
+    json:
+      property_name: links
+      specification_anchor: multipage-collections
+          
+  - name: startIndex
+    description: A non-negative integer value identifying the relative position within the collection of the first object contained in the items property. For instance, if there are 20 items that are considered to be members of a collection, but only the last 10 of those items are serialized within the value of the items property, the value of startIndex would be 10.
+    specification_anchor: multipage-collections
+    json:
+      property_name: startIndex
+      specification_anchor: multipage-collections
+
+external_vocabularies:
+  
+  - name: Dublin Core
+    identifier: dc
+    reference: http://dublincore.org
+    specification_anchor: dc
+  
+  - name: GeoJSON
+    identifier: geojson
+    reference: http://www.geojson.org/geojson-spec.html
+    specification_anchor: geojson
+    
+  - name: Linked Data for JSON
+    identifier: ld
+    reference: http://json-ld.org/
+    specification_anchor: ld
+    
+  - name: Links
+    identifier: links
+    reference: http://www.iana.org/assignments/link-relations/link-relations.xml
+    specification_anchor: links
+  
+  - name: OData
+    identifier: odata
+    reference: http://www.odata.org/
+    specification_anchor: odata
+    
+  - name: OpenGraph
+    identifier: opengraph
+    reference: http://developers.facebook.com/docs/opengraph/
+    specification_anchor: opengraph
+  
+  - name: Schema.org
+    identifier: schema_org
+    reference: http://schema.org
+    specification_anchor: schema_org
 

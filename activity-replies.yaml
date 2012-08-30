@@ -7,7 +7,7 @@ date: 2011-06-14
 
 activity_components:
 
-  - name: In Reply To
+  - name: In-Reply-To
     description: Array of Objects for which the containing activity or object is a response
     specification_anchor: stream
     json:
@@ -15,6 +15,27 @@ activity_components:
       specification_anchor: stream
 
 object_components:
+
+  - name: Attended By
+    description: Used to provide information about the collection of entities that attended an event
+    specification_anchor: stream
+    json:
+      property_name: attendedBy
+      specification_anchor: stream
+  
+  - name: Not Attended By
+    description: Used to provide information about the collection of entities that did not attend an event
+    specification_anchor: stream
+    json:
+      property_name: notAttendedBy
+      specification_anchor: stream
+  
+  - name: Invited
+    description: Used to provide information about the collection of entities that have been invited to an event, or possibly invited to join a group, etc.
+    specification_anchor: stream
+    json:
+      property_name: invited
+      specification_anchor: stream
 
   - name: Attending
     description: Used to provide information about the collection of actors that have responded to an event using the rsvp-yes verb.
