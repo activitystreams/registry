@@ -496,7 +496,7 @@ object_types:
     
   - name: Device
     identifier: device
-    description: A device of any time
+    description: A device of any type
     specification_anchor: object-types
     
   - name: Event
