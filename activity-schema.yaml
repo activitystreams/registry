@@ -476,7 +476,7 @@ object_types:
 
   - name: Binary
     identifier: binary
-    description: Objects of this type are used to carry arbirary Base64-encoded binary data within an Activity Stream object. It is primarily intended to attach binary data to other types of objects through the use of the "attachments" property.
+    description: Objects of this type are used to carry arbitrary Base64-encoded binary data within an Activity Stream object. It is primarily intended to attach binary data to other types of objects through the use of the "attachments" property.
     specification_anchor: object-types
 
   - name: Bookmark
